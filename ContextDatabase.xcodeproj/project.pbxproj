@@ -13,6 +13,7 @@
 		E9796DB02C2B18930094B6A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9796DAF2C2B18930094B6A4 /* Preview Assets.xcassets */; };
 		E9F19CFC2C2B2EF40090CCBF /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F19CFB2C2B2EF40090CCBF /* WebSocketServer.swift */; };
 		E9F19D012C2B32860090CCBF /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = E9F19D002C2B32860090CCBF /* Starscream */; };
+		E9F19D052C2B3C350090CCBF /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E9F19D042C2B3C350090CCBF /* CryptoSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E9796DAF2C2B18930094B6A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9796DB12C2B18930094B6A4 /* ContextDatabase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContextDatabase.entitlements; sourceTree = "<group>"; };
 		E9F19CFB2C2B2EF40090CCBF /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
+		E9F19D022C2B3A9B0090CCBF /* ContextDatabase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ContextDatabase-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +33,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9F19D012C2B32860090CCBF /* Starscream in Frameworks */,
+				E9F19D052C2B3C350090CCBF /* CryptoSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 				E9796DA82C2B18930094B6A4 /* ContextDatabaseApp.swift */,
 				E9796DAA2C2B18930094B6A4 /* ContentView.swift */,
 				E9F19CFB2C2B2EF40090CCBF /* WebSocketServer.swift */,
+				E9F19D022C2B3A9B0090CCBF /* ContextDatabase-Bridging-Header.h */,
 				E9796DAC2C2B18930094B6A4 /* Assets.xcassets */,
 				E9796DB12C2B18930094B6A4 /* ContextDatabase.entitlements */,
 				E9796DAE2C2B18930094B6A4 /* Preview Content */,
@@ -92,6 +96,7 @@
 			name = ContextDatabase;
 			packageProductDependencies = (
 				E9F19D002C2B32860090CCBF /* Starscream */,
+				E9F19D042C2B3C350090CCBF /* CryptoSwift */,
 			);
 			productName = ContextDatabase;
 			productReference = E9796DA52C2B18930094B6A4 /* ContextDatabase.app */;
@@ -123,6 +128,7 @@
 			mainGroup = E9796D9C2C2B18930094B6A4;
 			packageReferences = (
 				E9F19CFF2C2B32860090CCBF /* XCRemoteSwiftPackageReference "Starscream" */,
+				E9F19D032C2B3C350090CCBF /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = E9796DA62C2B18930094B6A4 /* Products */;
 			projectDirPath = "";
@@ -363,6 +369,14 @@
 				minimumVersion = 4.0.8;
 			};
 		};
+		E9F19D032C2B3C350090CCBF /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -370,6 +384,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E9F19CFF2C2B32860090CCBF /* XCRemoteSwiftPackageReference "Starscream" */;
 			productName = Starscream;
+		};
+		E9F19D042C2B3C350090CCBF /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9F19D032C2B3C350090CCBF /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
