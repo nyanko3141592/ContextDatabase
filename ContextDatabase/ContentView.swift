@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var webSocketServer = WebSocketServer.shared
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Text("WebSocket Server is running")
+                .padding()
+            List(webSocketServer.messages, id: \.self) { message in
+                Text(message)
+            }
         }
-        .padding()
     }
 }
 

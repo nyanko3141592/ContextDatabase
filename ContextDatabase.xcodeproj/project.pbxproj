@@ -11,6 +11,8 @@
 		E9796DAB2C2B18930094B6A4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9796DAA2C2B18930094B6A4 /* ContentView.swift */; };
 		E9796DAD2C2B18930094B6A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9796DAC2C2B18930094B6A4 /* Assets.xcassets */; };
 		E9796DB02C2B18930094B6A4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9796DAF2C2B18930094B6A4 /* Preview Assets.xcassets */; };
+		E9F19CFC2C2B2EF40090CCBF /* WebSocketServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F19CFB2C2B2EF40090CCBF /* WebSocketServer.swift */; };
+		E9F19D012C2B32860090CCBF /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = E9F19D002C2B32860090CCBF /* Starscream */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		E9796DAC2C2B18930094B6A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9796DAF2C2B18930094B6A4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E9796DB12C2B18930094B6A4 /* ContextDatabase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContextDatabase.entitlements; sourceTree = "<group>"; };
+		E9F19CFB2C2B2EF40090CCBF /* WebSocketServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocketServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F19D012C2B32860090CCBF /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				E9796DA82C2B18930094B6A4 /* ContextDatabaseApp.swift */,
 				E9796DAA2C2B18930094B6A4 /* ContentView.swift */,
+				E9F19CFB2C2B2EF40090CCBF /* WebSocketServer.swift */,
 				E9796DAC2C2B18930094B6A4 /* Assets.xcassets */,
 				E9796DB12C2B18930094B6A4 /* ContextDatabase.entitlements */,
 				E9796DAE2C2B18930094B6A4 /* Preview Content */,
@@ -85,6 +90,9 @@
 			dependencies = (
 			);
 			name = ContextDatabase;
+			packageProductDependencies = (
+				E9F19D002C2B32860090CCBF /* Starscream */,
+			);
 			productName = ContextDatabase;
 			productReference = E9796DA52C2B18930094B6A4 /* ContextDatabase.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +121,9 @@
 				Base,
 			);
 			mainGroup = E9796D9C2C2B18930094B6A4;
+			packageReferences = (
+				E9F19CFF2C2B32860090CCBF /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = E9796DA62C2B18930094B6A4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F19CFC2C2B2EF40090CCBF /* WebSocketServer.swift in Sources */,
 				E9796DAB2C2B18930094B6A4 /* ContentView.swift in Sources */,
 				E9796DA92C2B18930094B6A4 /* ContextDatabaseApp.swift in Sources */,
 			);
@@ -341,6 +353,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E9F19CFF2C2B32860090CCBF /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E9F19D002C2B32860090CCBF /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E9F19CFF2C2B32860090CCBF /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E9796D9D2C2B18930094B6A4 /* Project object */;
 }

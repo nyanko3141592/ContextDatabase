@@ -12,6 +12,9 @@ struct ContextDatabaseApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    WebSocketServer.shared.start()
+                }
         }
     }
 }
